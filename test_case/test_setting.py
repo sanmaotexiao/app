@@ -34,61 +34,61 @@ class Test_Setting_Page(unittest.TestCase):
         self.assertEqual(settings.check_lanya_click(),'关闭')
         settings.getscreenshot(sys._getframe().f_code.co_name)
 
-    # def test3 (self):
-    #     '''点击“更多”'''
-    #     settings = setting.Setting_page(self.driver)
-    #     settings.click_more()
-    #     print(settings.check_more_click())
-    #     self.assertEqual(settings.check_more_click(),'飞行模式')
-    #     settings.getscreenshot(sys._getframe().f_code.co_name)
-    #
-    # def test4 (self):
-    #     '''点击“显示”'''
-    #     settings = setting.Setting_page(self.driver)
-    #     settings.click_show()
-    #     print(settings.check_show_click())
-    #     self.assertEqual(settings.check_show_click(),'亮度')
-    #     settings.getscreenshot(sys._getframe().f_code.co_name)
-    #
-    # def test5(self):
-    #     '''点击“提示音和通知”'''
-    #     settings = setting.Setting_page(self.driver)
-    #     settings.msg_show()
-    #     print(settings.check_msg_click())
-    #     self.assertEqual(settings.check_msg_click(), '声音')
-    #     settings.getscreenshot(sys._getframe().f_code.co_name)
-    #
-    # def test6(self):
-    #     '''点击“存储”'''
-    #     settings = setting.Setting_page(self.driver)
-    #     settings.save_show()
-    #     print(settings.check_msg_click())
-    #     self.assertEqual(settings.check_save_click(), '内部存储空间')
-    #     settings.getscreenshot(sys._getframe().f_code.co_name)
-    #
-    # def test7(self):
-    #     '''点击“电池”'''
-    #     settings = setting.Setting_page(self.driver)
-    #     settings.battery_show()
-    #     print(settings.check_battery_click())
-    #     self.assertEqual(settings.check_battery_click(), '刷新')
-    #     settings.getscreenshot(sys._getframe().f_code.co_name)
-    #
-    # def test8(self):
-    #     '''点击“应用”'''
-    #     settings = setting.Setting_page(self.driver)
-    #     settings.application_show()
-    #     print(settings.check_application_click())
-    #     self.assertEqual(settings.check_application_click(), '已下载')
-    #     settings.getscreenshot(sys._getframe().f_code.co_name)
-    #
-    # def test9(self):
-    #     '''点击“位置信息”'''
-    #     settings = setting.Setting_page(self.driver)
-    #     settings.location_show()
-    #     print(settings.check_location_click())
-    #     self.assertEqual(settings.check_location_click(), '开启')
-    #     settings.getscreenshot(sys._getframe().f_code.co_name)
+    def test3 (self):
+        '''点击“更多”'''
+        settings = setting.Setting_page(self.driver)
+        settings.click_more()
+        print(settings.check_more_click())
+        self.assertEqual(settings.check_more_click(),'飞行模式')
+        settings.getscreenshot(sys._getframe().f_code.co_name)
+
+    def test4 (self):
+        '''点击“显示”'''
+        settings = setting.Setting_page(self.driver)
+        settings.click_show()
+        print(settings.check_show_click())
+        self.assertEqual(settings.check_show_click(),'亮度')
+        settings.getscreenshot(sys._getframe().f_code.co_name)
+
+    def test5(self):
+        '''点击“提示音和通知”'''
+        settings = setting.Setting_page(self.driver)
+        settings.msg_show()
+        print(settings.check_msg_click())
+        self.assertEqual(settings.check_msg_click(), '声音')
+        settings.getscreenshot(sys._getframe().f_code.co_name)
+
+    def test6(self):
+        '''点击“存储”'''
+        settings = setting.Setting_page(self.driver)
+        settings.save_show()
+        print(settings.check_msg_click())
+        self.assertEqual(settings.check_save_click(), '内部存储空间')
+        settings.getscreenshot(sys._getframe().f_code.co_name)
+
+    def test7(self):
+        '''点击“电池”'''
+        settings = setting.Setting_page(self.driver)
+        settings.battery_show()
+        print(settings.check_battery_click())
+        self.assertEqual(settings.check_battery_click(), '刷新')
+        settings.getscreenshot(sys._getframe().f_code.co_name)
+
+    def test8(self):
+        '''点击“应用”'''
+        settings = setting.Setting_page(self.driver)
+        settings.application_show()
+        print(settings.check_application_click())
+        self.assertEqual(settings.check_application_click(), '已下载')
+        settings.getscreenshot(sys._getframe().f_code.co_name)
+
+    def test9(self):
+        '''点击“位置信息”'''
+        settings = setting.Setting_page(self.driver)
+        settings.location_show()
+        print(settings.check_location_click())
+        self.assertEqual(settings.check_location_click(), '开启')
+        settings.getscreenshot(sys._getframe().f_code.co_name)
 
     def tearDown(self):
         self.driver.quit()
