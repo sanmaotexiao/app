@@ -3,9 +3,8 @@ from selenium.webdriver.support import expected_conditions as EC
 import logging
 import time,os
 
-cur_path = os.path.dirname(os.path.realpath(__file__))
-screenshot_path = os.path.join(os.path.dirname(cur_path),'screenshots')
-if not os.path.exists(screenshot_path):os.mkdir(screenshot_path)
+img_folder = os.path.abspath(os.path.join(os.path.dirname(__file__), "..")) + '//screenshots//'
+if not os.path.exists(img_folder):os.mkdir(img_folder)
 
 
 class Base_page():
@@ -42,7 +41,9 @@ class Base_page():
         except AttributeError as e:
             raise e
 
-    def getScreenShot(self):
+    def getscreenshot(self,modle):
         """重写截图方法"""
-        self.sh_file = os.path.join(screenshot_path, '%s.png' % time.strftime('%Y_%m_%d %H:%M:%S'))
-        self.driver.get_screenshot_as_file(self.sh_file)
+        times = time.strftime('%Y-%m-%d_%H_%M_%S_')
+        sh_file = img_folder+modle+'_'+times+'.png'
+        print(self.driver.get_screenshot_as_file(sh_file))
+        self.driver.get_screenshot_as_file(sh_file)

@@ -1,5 +1,7 @@
 
 from time import sleep
+
+
 class SlideHandle():
     def __init__(self, driver):
         self.driver = driver
